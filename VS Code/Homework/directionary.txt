@@ -1,0 +1,937 @@
+persta1
+Item 1 flexible social perspective-taking tasks
+"I am standing here writing statistics hints on the board and a student is sitting there doing statistics tasks. If here was there and there was here: Where was the student doing statistics tasks?"
+{0;1}
+{9}
+0 "there"
+1 "here"
+9 "missing value"
+
+persta2
+Item 2 flexible social perspective-taking tasks
+"I am sitting here with a statistics book and a student is sitting there reading aloud solutions from her notebook. If here was there and there was here: Where was the student sitting?"
+{0;1}
+{9}
+0 "there"
+1 "here"
+9 "missing value"
+
+persta3
+Item 3 flexible social perspective-taking tasks
+"I am walking here through the corridor and a student is going there to a student to discuss statistics tasks. If here was there and there was here: Where was the student going?"
+{0;1}
+{9}
+0 "there"
+1 "here"
+9 "missing value"
+
+persta4
+Item 4 flexible social perspective-taking tasks
+"I am standing here in front of students pointing to the next statistics task and a student is standing there at the back of the last table and leafing through a book. If here was there and there was here: Where was the student standing?"
+{0;1}
+{9}
+0 "there"
+1 "here"
+9 "missing value"
+
+persta5
+Item 5 flexible social perspective-taking tasks
+"I am walking here around the room and a student is going there to the whiteboard writing a new statistics task. If here was there and there was here: Where was the student going?"
+{0;1}
+{9}
+0 "there"
+1 "here"
+9 "missing value"
+
+pereng6
+Item 6 flexible social perspective-taking tasks
+"I am standing here writing English hints on the board and a student is sitting there doing English tasks. If here was there and there was here: Where was the student sitting?"
+{0;1}
+{9}
+0 "there"
+1 "here"
+9 "missing value"
+
+pereng7
+Item 7 flexible social perspective-taking tasks
+"I am sitting here with an English book and a student is sitting there reading aloud solutions from her notebook. If here was there and there was here: Where was the student sitting?"
+{0;1}
+{9}
+0 "there"
+1 "here"
+9 "missing value"
+
+pereng8
+Item 8 flexible social perspective-taking tasks
+"I am walking here through the corridor and a student is going there to a student to discuss English tasks. If here was there and there was here: Where was the student going?"
+{0;1}
+{9}
+0 "there"
+1 "here"
+9 "missing value"
+
+pereng9
+Item 9 flexible social perspective-taking tasks
+"I am standing here in front of students pointing to the next English task and a student is standing there at the back of the last table and leafing through a book. If here was there and there was here: Where was the student standing?"
+{0;1}
+{9}
+0 "there"
+1 "here"
+9 "missing value"
+
+pereng10
+Item 10 flexible social perspective-taking tasks
+"I am walking here around the room and a student is going there to the whiteboard writing a new English task. If here was there and there was here: Where was the student going?"
+{0;1}
+{9}
+0 "there"
+1 "here"
+9 "missing value"
+
+pt1
+Item 1 perspective-taking tendency
+"I try to look at everybody's side of a disagreement before I make a decision."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+pt2
+Item 2 perspective-taking tendency
+"When I'm upset at someone, I usually try to "put myself in his shoes" for a while."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+pt3
+Item 3 perspective-taking tendency
+"I believe that there are two sides to every question and try to look at them both."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+pt4
+Item 4 perspective-taking tendency
+"Before criticizing people, I try to imagine how I would feel if I were in their place."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+emp1
+Item 1 empathic concern
+"I would describe myself as a pretty soft hearted person."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+emp2
+Item 2 empathic concern
+"I am often quite touched by things that I see happen."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+emp3
+Item 3 empathic concern
+"I often have tender, concerned feelings for people less fortunate than me."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+emp4
+Item 4 empathic concern
+"When I see someone being taken advantage of, I feel kind of protective toward them."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+gbjw1
+Item 1 general belief in a just world
+"I think basically the world is a just place."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+gbjw2
+Item 2 general belief in a just world
+"I believe that, by and large, people get what they deserve."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+gbjw3
+Item 3 general belief in a just world
+"I firmly believe that injustices in all areas of life (e.g., professional, family, politic) are the exception rather than the rule."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+gbjw4
+Item 4 general belief in a just world
+"I am convinced that in the long run people will be compensated for injustices."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+gbjw5
+Item 5 general belief in a just world
+"I think people try to be fair when making important decisions."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+gbjw6
+Item 6 general belief in a just world
+"I am confident that justice always prevails over injustice."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+pbjw1
+Item 1 personal belief in a just world
+"I believe that, by and large, I deserve what happens to me."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+pbjw2
+Item 2 personal belief in a just world
+"I am usually treated fairly."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+pbjw3
+Item 3 personal belief in a just world
+"I believe that I usually get what I deserve."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+pbjw4
+Item 4 personal belief in a just world
+"Overall, events in my life are just."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+pbjw5
+Item 5 personal belief in a just world
+"In my life injustice is the exception rather than the rule."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+pbjw6
+Item 6 personal belief in a just world
+"I believe that most of the things that happen in my life are fair."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+pbjw7
+Item 7 personal belief in a just world
+"I think that important decisions that are made concerning me are usually just."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sef1
+Item 1 general self-efficacy
+"If someone opposes me, I can find the means and ways to get what I want."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sef2
+Item 2 general self-efficacy
+"I can always manage to solve difficult problems if I try hard enough."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sef3
+Item 3 general self-efficacy
+"It is easy for me to stick to my aims and accomplish my goals."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sef4
+Item 4 general self-efficacy
+"Thanks to my resourcefulness, I know how to handle unforeseen situations."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sef5
+Item 5 general self-efficacy
+"I am confident that I could deal efficiently with unexpected events."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sef6
+Item 6 general self-efficacy
+"I can remain calm when facing difficulties because I can rely on my coping abilities."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sef7
+Item 7 general self-efficacy
+"I can usually handle whatever comes my way."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sef8
+Item 8 general self-efficacy
+"I can solve most problems if I invest the necessary effort."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sef9
+Item 9 general self-efficacy
+"If I am in trouble, I can usually think of a solution."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sef10
+Item 10 general self-efficacy
+"When I am confronted with a problem, I can usually find several solutions."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sd1
+Item 1 social desirability
+"In traffic, I am always polite and considerate of others."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sd2
+Item 2 social desirability
+"I always accept others’ opinions, even when they don’t agree with my own."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sd3
+Item 3 social desirability
+"There has been an occasion when I took advantage of someone else. (R)"
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sd4
+Item 4 social desirability
+"In conversations, I always listen attentively and let others finish their sentences."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sd5
+Item 5 social desirability
+"I never hesitate to help someone in case of emergency."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sd6
+Item 6 social desirability
+"When I have made a promise, I keep it – no ifs, ands, or buts."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sd7
+Item 7 social desirability
+"I would never live off other people."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sd8
+Item 8 social desirability
+"I always stay friendly and courteous with other people, even when I am stressed out."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sd9
+Item 9 social desirability
+"There has been at least one occasion when I failed to return an item that I borrowed."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sd10
+Item 10 social desirability
+"Sometimes I only help because I expect something in return. (R)"
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+lj1
+Item 1 lecturer justice
+"My lecturers generally treat me fairly."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+lj2
+Item 2 lecturer justice
+"My grades are often based on my behavior rather than on my achievements at the university. (R)"
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+lj3
+Item 3 lecturer justice
+"I generally deserve the grades I get at the university."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+lj4
+Item 4 lecturer justice
+"My lecturers often behave unfairly toward me. (R)"
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+lj5
+Item 5 lecturer justice
+"The important decisions my lecturers make about me are usually just."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+lj6
+Item 6 lecturer justice
+"My teachers frequently grade me unfairly. (R)"
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+lj7
+Item 7 lecturer justice
+"I am often treated unfairly by my lecturers. (R)"
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+lj8
+Item 8 lecturer justice
+"My grades often depend on how much my lecturers like me. (R)"
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+lj9
+Item 9 lecturer justice
+"Sometimes my lecturers try to catch me out in exams. (R)"
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+lj10
+Item 10 lecturer justice
+"My lecturer are often unjust to me. (R)"
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sj1
+Item 1 fellow student justice
+"My fellow students generally treat me fairly."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sj2
+Item 2 fellow student justice
+"I am often treated unfairly by my fellow students. (R)"
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sj3
+Item 3 fellow student justice
+"The important decisions my fellow students make about me are usually just."
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sj4
+Item 4 fellow student justice
+"My fellow students often judge me unfairly. (R)"
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sj5
+Item 5 fellow student justice
+"My fellow students often behave unfairly toward me. (R)"
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+
+sj6
+Item 6 fellow student justice
+"My fellow students are often unjust to me. (R)"
+{1;2;3;4;5;6}
+{9}
+1 "strongly disagree"
+2 "disagree"
+3 "slightly disagree"
+4 "slightly agree"
+5 "agree"
+6 "strongly agree"
+9 "missing value"
+ 
+
+cbv_ave: cyber bullying victim experience
+{1;2;3;4;5}
+
+1 "no"
+2 "yes, once or twice"
+3 "yes, once or twice a month"
+4 "yes, about once a week"
+5 "yes, more than once a week"
+ 
+
+gender
+gender
+"Gender"
+{1;2;3}
+{9}
+1 "female"
+2 "male"
+3 "diverse"
+9 "missing value"
+
+ALTER
+Alter
+"Age"
+{18-48}
+{999}
+18-48 
+999 "missing value"
+
+mobil
+possession of a mobil phone / Smartphone
+"Do you have a cell phone / smartphone?"
+{0;1}
+{9}
+0 "no"
+1 "yes"
+9 "missing value"
+
+pc
+possession of a computer or something similar
+"Do you have a computer?"
+{0;1}
+{9}
+0 "no"
+1 "yes"
+9 "missing value"
+
+internet
+internet access available
+"Do you have internet access?"
+{0;1}
+{9}
+0 "no"
+1 "yes"
+9 "missing value"
+
+socnet
+use of a social network profile
+"Do you have your own profile on a "Social Network" page (e.g. Facebook)?"
+{0;1}
+{9}
+0 "no"
+1 "yes"
+9 "missing value"
+
+Whatsapp
+use of Whatsapp or something similar
+"Do you use Whatsapp or something similar?"
+{0;1}
+{9}
+0 "no"
+1 "yes"
+9 "missing value"
+
+webhours
+how many hours per day on average on the internet
+"How many hours do you spend on average daily on the internet?"
+{0.5-24}
+{999}
+0.5-24
+999 "missing value"
+
+sample
+before or during the SARS-CoV-2 pandemic
+""
+{1;2}
+{9}
+1 "paper-pencil"
+2 "online"
+9 "missing value"
+
+study
+course of studies
+"Course of studies"
+{string}
+{999}
+string "course of studies"
+999 "missing value"
+
+state
+german federal states
+"State in which your university is located"
+{string}
+{999}
+string "german federal states"
+999 "missing value"
