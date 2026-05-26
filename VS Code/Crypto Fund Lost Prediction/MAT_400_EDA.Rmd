@@ -1,0 +1,338 @@
+---
+title: "MAT_400_EDA"
+output: html_document
+date: "2024-10-24"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+
+```
+
+# Calling Packages
+```{r}
+library("languageserver")
+library(tidyverse)
+library(skimr)
+library(janitor)
+library(dplyr)
+library(stats)
+library(vars)
+library(MASS)
+library(zoo)
+library(strucchange)
+library(sandwich)
+library(urca)
+library(lmtest)
+library(carData)
+library(car)
+library(rugarch)
+library(tseries)
+library(quantmod)
+library(tibble)
+library(lubridate)
+library(readxl)
+library(dplyr)
+library(pastecs)
+library(wooldridge)
+library(car)
+library(ggplot2)
+library(caret)
+library(ISLR)
+library(gridExtra)
+
+```
+
+# Importing Dataset
+```{r}
+# CHUNK 1
+setwd("C:/Users/erick/OneDrive - IL State University/ISU MASTERS/FALL 2024/Independent Study/MAT 400 Codes/My Project")
+data <- read.csv("rekt_database1_expoit.csv")
+
+```
+
+## Data Cleaning
+
+```{r}
+#This is for cleaning the dataset
+
+# Remember to append the name of the dataset ("data")
+data$Project.Name <- NULL
+
+# Convert the currency column to numeric
+data$Funds.Lost <- as.numeric(gsub("[$,]", "", data$Funds.Lost))
+
+# Convert the character column to Date type
+data$Date <- as.Date(data$Date, format = "%m.%d.%Y")
+
+# Extract the year using format()
+data$Year <- as.numeric(format(data$Date, "%Y"))
+
+# Drop rows with any NA values
+data <- na.omit(data)
+
+#Renaming Columns
+data$"Issue" <- data$Type.of.the.Issue
+data$Type.of.the.Issue <- NULL
+
+data$"Chain" <- data$CHAIN
+data$CHAIN <- NULL
+
+data$"Quick Summary" <- data$Quick.Summary
+data$Quick.Summary <- NULL
+
+data$"Details" <- data$Details.of.the.Exploit
+data$Details.of.the.Exploit <- NULL
+
+# Remove special characters or numbers from the category names
+data$Category <- gsub("[^a-zA-Z]+", "", data$Category)
+data$Chain <- gsub("[^a-zA-Z]+", "", data$Chain)
+data$Issue <- gsub("[^a-zA-Z]+", "", data$Issue)
+
+# Count the occurrences of each category
+chain_counts <- data %>%
+  group_by(Chain) %>%
+  summarise(count = n())
+
+# Recode categories with a count less than 30 as "Other"
+data <- data %>%
+  mutate(Chain = ifelse(Chain %in% chain_counts$Chain[chain_counts$count < 30], "Other", Chain))
+
+# Count unique items in the categorical variable
+#data %>%
+#  count(Category)
+```
+
+## Summary Statistics
+
+```{r}
+summary(data)
+
+```
+
+## Univariate Data Visualization
+
+```{r}
+# Number of Incidents by Years
+p1 <- ggplot(data, aes(x=Year)) + 
+      geom_bar(fill = "blue") + 
+      ggtitle("Number of Incidents by Years") +  # Add title
+      theme(axis.text.x = element_text(angle = 45, hjust = 1),  # Angle x labels and center
+      plot.title = element_text(hjust = 0.5)) +  
+      scale_x_continuous(breaks = seq(2011, 2025, by = 2)) + # Specify the interval (2 years)
+      labs(x = "Year", y = "Count")
+
+ggsave("inc_by_year.png",plot=p1, width = 7, height = 5, dpi = 300)
+
+
+# Number of Incidents by Issue Type
+p2 <- ggplot(data, aes(x=Issue)) + 
+      geom_bar( fill = "blue") + 
+      ggtitle("Number of Incidents by Issue Type") +  # Add title
+      theme(axis.text.x = element_text(angle = 45, hjust = 1),  # Angle x labels and center
+      plot.title = element_text(hjust = 0.5)) +  
+      #scale_x_continuous(breaks = seq(2011, 2025, by = 2)) + # Specify the interval (2 years)
+      labs(x = "Issue Type", y = "Count")
+
+ggsave("inc_by_issue.png",plot=p2, width = 7, height = 5, dpi = 300)
+
+# Number of Incidents by Category
+p3 <- ggplot(data, aes(x=Category)) + 
+      geom_bar( fill = "blue") + 
+      ggtitle("Number of Incidents by Category") +  # Add title
+      theme(axis.text.x = element_text(angle = 45, hjust = 1),  # Angle x labels and center
+      plot.title = element_text(hjust = 0.5)) +  
+      #scale_x_continuous(breaks = seq(2011, 2025, by = 2)) + # Specify the interval (2 years)
+      labs(x = "Category", y = "Count")
+
+ggsave("inc_by_category.png",plot=p3, width = 7, height = 5, dpi = 300)
+
+# Number of Incidents by Category
+p4 <- ggplot(data, aes(x=Chain)) + 
+      geom_bar( fill = "blue") + 
+      ggtitle("Number of Incidents by Chain") +  # Add title
+      theme(axis.text.x = element_text(angle = 45, hjust = 1),  # Angle x labels and center
+      plot.title = element_text(hjust = 0.5)) +  
+      #scale_x_continuous(breaks = seq(2011, 2025, by = 2)) + # Specify the interval (2 years)
+      labs(x = "Chain", y = "Count")
+
+ggsave("inc_by_chain.png",plot=p4, width = 7, height = 5, dpi = 300)
+
+d1 <- grid.arrange(p1, p2, p3, p4, nrow=2)
+
+print(d1)
+
+ggsave("inc_combined.png",plot=d1, width = 7, height = 5, dpi = 300)
+
+```
+
+## Bivariate Data Visualization
+
+```{r}
+# Summarize the data by Year
+data_summary_year <- data %>%
+  group_by(Year) %>%
+  summarise(
+    total_funds = sum(Funds.Lost),
+    average_funds = mean(Funds.Lost)
+  )
+
+p5 <- ggplot(data_summary_year, aes(x=Year)) + 
+      geom_bar(aes(y = total_funds), stat = "identity", fill = "blue") + 
+      ggtitle("Total Funds Lost by Years") +  # Add title
+      theme(axis.text.x = element_text(angle = 45, hjust = 1),  # Angle x labels and center
+      plot.title = element_text(hjust = 0.5)) +  
+      scale_x_continuous(breaks = seq(2011, 2025, by = 2)) + # Specify the interval (2 years)
+      labs(x = "Years", y = "Funds Lost")
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+  ggsave("fund_year_total.png",plot=p5, width = 7, height = 5, dpi = 300)
+  
+p6 <- ggplot(data_summary_year, aes(x=Year)) + 
+      geom_bar(aes(y = average_funds), stat = "identity", fill = "blue") + 
+      ggtitle("Average Funds Lost by Years") +  # Add title
+      theme(axis.text.x = element_text(angle = 45, hjust = 1),  # Angle x labels and center
+      plot.title = element_text(hjust = 0.5)) +  
+      scale_x_continuous(breaks = seq(2011, 2025, by = 2)) + # Specify the interval (2 years)
+      labs(x = "Years", y = "Funds Lost")
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+  ggsave("fund_year_avg.png",plot=p6, width = 7, height = 5, dpi = 300)
+  
+  d2 <- grid.arrange(p5, p6, nrow=1)
+  
+  print(d2)
+
+  ggsave("fund_year_combined.png",plot=d2, width = 7, height = 5, dpi = 300)
+
+
+
+```
+
+
+```{r}
+# Summarize the data by Issue Type
+data_summary_issue <- data %>%
+  group_by(Issue) %>%
+  summarise(
+    total_funds = sum(Funds.Lost),
+    average_funds = mean(Funds.Lost)
+  )
+
+p7 <- ggplot(data_summary_issue, aes(x=Issue)) + 
+      geom_bar(aes(y = total_funds), stat = "identity", fill = "blue") + 
+      ggtitle("Total Funds Lost by Issue Type") +  # Add title
+      theme(axis.text.x = element_text(angle = 45, hjust = 1),  # Angle x labels and center
+      plot.title = element_text(hjust = 0.5)) +  
+      labs(x = "Issue Type", y = "Funds Lost")
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+  ggsave("fund_issue_total.png",plot=p7, width = 7, height = 5, dpi = 300)
+  
+p8 <- ggplot(data_summary_issue, aes(x=Issue)) + 
+      geom_bar(aes(y = average_funds), stat = "identity", fill = "blue") + 
+      ggtitle("Average Funds Lost by Issue Type") +  # Add title
+      theme(axis.text.x = element_text(angle = 45, hjust = 1),  # Angle x labels and center
+      plot.title = element_text(hjust = 0.5)) +  
+      labs(x = "Issue Type", y = "Funds Lost")
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+  ggsave("fund_issue_avg.png",plot=p8, width = 7, height = 5, dpi = 300)
+  
+  d3 <- grid.arrange(p7, p8, nrow=1)
+  
+  print(d3)
+  
+  ggsave("fund_issue_combined.png",plot=d3, width = 7, height = 5, dpi = 300)
+
+
+```
+
+
+```{r}
+# Summarize the data by Category
+data_summary_cat <- data %>%
+  group_by(Category) %>%
+  summarise(
+    total_funds = sum(Funds.Lost),
+    average_funds = mean(Funds.Lost)
+  )
+
+p9 <- ggplot(data_summary_cat, aes(x=Category)) + 
+      geom_bar(aes(y = total_funds), stat = "identity", fill = "blue") + 
+      ggtitle("Total Funds Lost by Category") +  # Add title
+      theme(axis.text.x = element_text(angle = 45, hjust = 1),  # Angle x labels and center
+      plot.title = element_text(hjust = 0.5)) +  
+      labs(x = "Category", y = "Funds Lost")
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+  ggsave("fund_cat_total.png",plot=p9, width = 7, height = 5, dpi = 300)
+  
+p10 <- ggplot(data_summary_cat, aes(x=Category)) + 
+      geom_bar(aes(y = average_funds), stat = "identity", fill = "blue") + 
+      ggtitle("Average Funds Lost by Category") +  # Add title
+      theme(axis.text.x = element_text(angle = 45, hjust = 1),  # Angle x labels and center
+      plot.title = element_text(hjust = 0.5)) +  
+      labs(x = "Category", y = "Funds Lost")
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+  ggsave("fund_cat_avg.png",plot=p10, width = 7, height = 5, dpi = 300)
+  
+  d4 <- grid.arrange(p9, p10, nrow=1)
+  
+  print(d4)
+
+  ggsave("fund_cat_combined.png",plot=d4, width = 7, height = 5, dpi = 300)
+
+
+```
+
+```{r}
+# Summarize the data by Chain
+data_summary_chain <- data %>%
+  group_by(Chain) %>%
+  summarise(
+    total_funds = sum(Funds.Lost),
+    average_funds = mean(Funds.Lost)
+  )
+
+p11 <- ggplot(data_summary_chain, aes(x=Chain)) + 
+      geom_bar(aes(y = total_funds), stat = "identity", fill = "blue") + 
+      ggtitle("Total Funds Lost by Chain") +  # Add title
+      theme(axis.text.x = element_text(angle = 45, hjust = 1),  # Angle x labels and center
+      plot.title = element_text(hjust = 0.5)) +  
+      labs(x = "Chain", y = "Funds Lost")
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+  ggsave("fund_chain_total.png",plot=p11, width = 7, height = 5, dpi = 300)
+  
+p12 <- ggplot(data_summary_chain, aes(x=Chain)) + 
+      geom_bar(aes(y = average_funds), stat = "identity", fill = "blue") + 
+      ggtitle("Average Funds Lost by Chain") +  # Add title
+      theme(axis.text.x = element_text(angle = 45, hjust = 1),  # Angle x labels and center
+      plot.title = element_text(hjust = 0.5)) +  
+      labs(x = "Chain", y = "Funds Lost")
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+  ggsave("fund_chain_avg.png",plot=p12, width = 7, height = 5, dpi = 300)
+  
+  d5 <- grid.arrange(p11, p12, nrow=1)
+  
+  print(d5)
+  
+  ggsave("fund_chain_combined.png",plot=d5, width = 7, height = 5, dpi = 300)
+  
+  
+
+```
+
+# Exporting Dataset to CSV
+```{r}
+# Export the data frame to a CSV file
+write.csv(data, "data_cleaned.csv", row.names = FALSE)
+
+```
